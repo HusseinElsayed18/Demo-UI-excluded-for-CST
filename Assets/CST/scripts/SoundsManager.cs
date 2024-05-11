@@ -16,7 +16,7 @@ namespace CST
         private void Start()
         {
             InitBackgroundMusic(bgMusic, bgmusicClip);
-            EventsManager.onBtnClick += BtnClick;
+            EventsManager.onBtnPlayClick += BtnClick;
         }
         public void InitBackgroundMusic(AudioSource source, AudioClip clip)
         {

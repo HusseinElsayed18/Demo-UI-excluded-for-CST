@@ -342,10 +342,10 @@ TextureImporter:
       name: UI_10
       rect:
         serializedVersion: 2
-        x: 911
-        y: 3552
-        width: 376
-        height: 382
+        x: 929
+        y: 3536
+        width: 341
+        height: 411
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,7 +494,7 @@ TextureImporter:
         width: 136
         height: 166
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -502,6 +502,27 @@ TextureImporter:
       bones: []
       spriteID: 35e7d82269457d34fb9e119451010464
       internalID: -366758273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_18
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 3670
+        width: 157
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef816bd0af70f5a42a6b1fbff34484f1
+      internalID: 361645641
       vertices: []
       indices: 
       edges: []
@@ -534,6 +555,7 @@ TextureImporter:
       UI_10: 360854216
       UI_8: -1424029099
       UI_6: 1153576670
+      UI_18: 361645641
       UI_5: 264980534
   spritePackingTag: 
   pSDRemoveMatte: 0
