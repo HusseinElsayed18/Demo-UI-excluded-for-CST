@@ -29,15 +29,18 @@ namespace CST
                 {
                     if (cardsManager.selectedCard != GetComponent<Button>())
                     {
-                        if (cardsManager.selectedCard.GetComponent<CardBtn>().card.card == card.card)
+                        Button selectedCard = cardsManager.selectedCard;
+                        cardsManager.selectedCard = null;
+                        EnableMatchedOrMisMatchedCards(GetComponent<Button>(), selectedCard,false);
+                        if (selectedCard.GetComponent<CardBtn>().card.card == card.card)
                         {                         
                             GameManager.Instance.soundsManager.MatchEffect();
-                            StartCoroutine(MatchCards(0.2f));
+                            StartCoroutine(MatchCards(0.2f , selectedCard));
                         }
                         else
                         {
                             GameManager.Instance.soundsManager.MisMatchEffect();
-                            StartCoroutine(MisMatchCardsLock(0.2f));
+                            StartCoroutine(MisMatchCardsLock(0.2f , selectedCard));
                         }
                     }
 
@@ -45,10 +48,8 @@ namespace CST
             });
 
         }
-        IEnumerator MatchCards(float sec)
+        IEnumerator MatchCards(float sec , Button selectedCard)
         {
-            Button selectedCard = cardsManager.selectedCard;
-            cardsManager.selectedCard = null;
             yield return new WaitForSeconds(sec);
             cardsManager.DisableCardItem(selectedCard);
             cardsManager.DisableCardItem(GetComponent<Button>());
@@ -57,16 +58,20 @@ namespace CST
             {
                 EventsManager.GameOver();
             }
+           
         }
-        IEnumerator MisMatchCardsLock(float sec)
+        IEnumerator MisMatchCardsLock(float sec , Button selectedCard)
         {
-            Button selectedCard = cardsManager.selectedCard;
-            cardsManager.selectedCard = null;
             yield return new WaitForSeconds(sec);
             transform.GetChild(0).GetComponent<Image>().sprite = GameManager.Instance.uIManager.cardLockImg;
             selectedCard.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.Instance.uIManager.cardLockImg;
             EventsManager.MisMatch();
-            
+            EnableMatchedOrMisMatchedCards(GetComponent<Button>(), selectedCard, true);
+        }
+        void EnableMatchedOrMisMatchedCards(Button card1 , Button card2 , bool enabled)
+        {
+            card1.enabled = enabled;
+            card2.enabled = enabled;
         }
         private void OnDestroy()
         {
