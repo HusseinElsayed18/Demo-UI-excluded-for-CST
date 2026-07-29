@@ -10,5 +10,5 @@ A highly optimized, decoupled, and event-driven architecture built for a Unity-b
 * **Performance-First UI Layout:** Designed to prevent constant Unity Canvas rebuilding when managing multiple grid elements dynamically.
 
 * ## 🎥 Gameplay & Interface Demo
-▶️ [**Click Here to Watch the Gameplay Demo Video on Google Drive**]([YOUR_GOOGLE_DRIVE_LINK_HERE](https://drive.google.com/file/d/1O-DCytYk9GGdMy8PONb0Mei79_FAo3uU/view?usp=drive_link))
+▶️ [**Click Here to Watch the Gameplay Demo Video on Google Drive**](https://drive.google.com/file/d/1O-DCytYk9GGdMy8PONb0Mei79_FAo3uU/view?usp=drive_link)
 
