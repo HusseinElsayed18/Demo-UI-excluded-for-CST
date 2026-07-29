@@ -1,4 +1,4 @@
-# Demo UI System (CST Component)
+# Demo UI System (matching game)
 
 > "I designed and implemented a fully event-driven matching game UI architecture from scratch in just 16 hours. Despite the rapid turnaround, I prioritized mobile-first optimization practices—such as event decoupling and component caching—allowing the project to run at a rock-solid 120 FPS with minimal frame times."
 
